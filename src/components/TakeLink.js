@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom'
 
 class TakeLink extends Component {
 
+    
+
     render() {
         return (
             <div>
