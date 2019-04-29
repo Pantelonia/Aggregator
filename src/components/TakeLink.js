@@ -12,17 +12,19 @@ class TakeLink extends Component {
         this.handleChange = this.handleChange.bind(this);
 
     }
-
-    handleClick() {
-        axios.get('http://localhost:8080/takeLink/hi')
-        console.log('check');
-    }
+    //
+    // handleClick() {
+    //     axios.get('http://localhost:8080/takeLink/hi')
+    //     console.log('check');
+    // }
     handleChange(event){
         this.setState({value: event.target.value});
     }
-    handleSubmit(){
-        var link = this.state.value;
-        axios.get('http://localhost:8080/takeLink/'+link)
+    handleSubmit(event){
+        axios.get('http://localhost:8080/takeLink/', {params: {link: this.state.value}});
+            // .then(response =>alert(response.data));
+        // event.preventDefault();
+
     }
 
     render() {
