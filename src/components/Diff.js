@@ -5,12 +5,12 @@ render(){
 const {diff} = this.props
 return(
     <div>
-        <h4>Old_path:{diff.old_path}</h4>
-        <h4>New_path:{diff.new_path}</h4>
-        <h4>New_file:{diff.new_file.toString()}</h4>
-        <h4>Renamed_file:{diff.renamed_file.toString()}</h4>
-        <h4>deleted_file:{diff.deleted_file.toString()}</h4>
-        <h4>Commit_id:{diff.commit_id}</h4>
+        <h4>OldPath:{diff.oldPath}</h4>
+        <h4>NewPath:{diff.newPath}</h4>
+        <h4>NewFile:{diff.newFile.toString()}</h4>
+        <h4>RenamedFile:{diff.renamedFile.toString()}</h4>
+        <h4>deletedFile:{diff.deletedFile.toString()}</h4>
+        <h4>Commit_id:{diff.commitId}</h4>
         <h4>{diff.diff}</h4>
     </div>
 

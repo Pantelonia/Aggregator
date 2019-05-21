@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import ListOfCommits from "./ListOfCommits";
 import data from '../projectData';
 import {Link} from 'react-router-dom'
-
+import "../style/wrap.css"
 
 
 class ProjectInfo extends Component {

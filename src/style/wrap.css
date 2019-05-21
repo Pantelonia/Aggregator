@@ -1,0 +1,39 @@
+
+.colorback{
+    background-color: #BBDEFB;
+
+}
+.wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #BBDEFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+.front {
+    background-color: #fff;
+}
+.back {
+    background-color: #BDBDBD;
+    transform: rotateY(180deg);
+}
+.card:hover .front {transform: rotateY(180deg);}
+.card:hover .back {transform: rotateY(360deg);}
