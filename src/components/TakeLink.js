@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import { Redirect } from 'react-router';
-
 import axios from 'axios';
-
+import file from '../jsn'
 class TakeLink extends Component {
 
 
@@ -30,6 +29,14 @@ class TakeLink extends Component {
     }
 
 
+    componentDidMount(){
+        var fs = require('browserify-fs');
+
+        fs.readFile('../jsn.json', 'utf-8', function(err, data) {
+            console.log(data);
+        });
+    }
+
     handleSubmit(event) {
         event.preventDefault();
 
@@ -45,11 +52,15 @@ class TakeLink extends Component {
         // axios.get('http://localhost:8080/takeLink/', {params: {link: this.state.value, crawler: this.state.crawler}})
         //     .then(response => alert(JSON.parse(JSON.stringify(response.data))).id);
         var data = JSON.parse(httpGet('http://localhost:8080/takeLink/', this.state.value, this.state.crawler));
-        // const jsonfile = data;
-        // const file = '../projectData.json';
-        // jsonfile.readFile(file)
-        //     .then(obj => console.dir(obj))
-        //     .catch(error => console.error(error));
+        var fs = require('browserify-fs');
+        fs.writeFile('../jsn.json', JSON.stringify(data), function() {
+            fs.readFile('../jsn.json', 'utf-8', function(err, data) {
+                console.log(data);
+            });
+        });
+
+
+
         this.setState({redirect: true});
 
 
@@ -90,3 +101,46 @@ class TakeLink extends Component {
 }
 
 export default TakeLink;
+
+import React, {Component} from "react";
+import ListOfCommits from "./ListOfCommits";
+// import data from 'C:\\Users\\User\\Desktop\\react_home\\praktika\\srcjsn';
+// import data from "../jsn.json"
+import {Link} from 'react-router-dom'
+import "../style/wrap.css"
+
+class ProjectInfo extends Component {
+    constructor(props){
+        super(props)
+
+    }
+    componentDidMount(){
+
+
+    }
+    render() {
+        // const data = this.state.data;
+        return (
+            <div className="card">
+                <div className="card-header">
+                    <h2 >Current project info</h2>
+                    <Link to='/'> Return</Link>
+                </div>
+                <div className="card-body card-text">
+                    <h4 className="">Name: {data.name}</h4>
+                    <h4>description: {data.description}</h4>
+                    <h4>web_url: {data.web_url}</h4>
+                    <h4>avatar_url: {data.avatar_url}</h4>
+                    <h4>created_at: {data.created_at}</h4>
+                    <ListOfCommits commits={data.commits}/>
+                </div>
+
+            </div>
+
+        )
+    }
+
+
+}
+
+export default ProjectInfo;

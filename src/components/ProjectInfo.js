@@ -1,16 +1,21 @@
 import React, {Component} from "react";
 import ListOfCommits from "./ListOfCommits";
-import data from '../projectData';
+// import data from 'C:\\Users\\User\\Desktop\\react_home\\praktika\\srcjsn';
+// import data from "../jsn.json"
 import {Link} from 'react-router-dom'
 import "../style/wrap.css"
 
-
 class ProjectInfo extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(props){
+        super(props)
+
+    }
+    componentDidMount(){
+
+
+    }
     render() {
-        // const {data} = this.props
+        // const data = this.state.data;
         return (
             <div className="card">
                 <div className="card-header">

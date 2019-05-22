@@ -17,7 +17,7 @@ export default class ListofDiffs extends Component {
 
         return (
             <div>
-                <h4 onClick={this.handleClick}>Diffs
+                <h4 style={{color: "blue"}} onClick={this.handleClick}>Diffs
                     {/*<button className="btn-primary"  onClick={this.handleClick}>*/}
                         {/*{this.state.isOpen ? 'Close' : 'Open'}*/}
                     {/*</button>*/}
