@@ -1,4 +1,4 @@
-# The aggregator code
+# The aggregator code 
 
 
 ### That project created for the purpose of providing information about project from GitLab:
@@ -9,8 +9,8 @@
 
 # Getting started
 Project is divided into to part:
-- [Frontend] (https://github.com/Pantelonia/Aggregator)
-- [Backend] (https://github.com/Pantelonia/AggregatorBack)
+- [Frontend](https://github.com/Pantelonia/Aggregator)
+- [Backend](https://github.com/Pantelonia/AggregatorBack)
 ### To kick-start clone repo and build the app
 
 # Installation
@@ -33,4 +33,9 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
+
+#Author
+- [Syrovatskiy pavel](https://github.com/Pantelonia)
+- [Artamonov Alex](https://github.com/ArtamonovAlex)
+- [Kocharian Sergei](https://github.com/KACHANIX)
 
