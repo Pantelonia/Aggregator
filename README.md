@@ -3,9 +3,9 @@
 
 ### That project created for the purpose of providing information about project from GitLab:
 - Information about Project
-- Information about author
-- All project's commit
-- Information about difference between commit
+- Information about Author
+- All project's Commit
+- Information about Difference between Commit
 
 # Getting started
 Project is divided into to part:
