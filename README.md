@@ -1,3 +1,4 @@
+ 
 # The aggregator code 
 
 
@@ -8,7 +9,7 @@
 - Information about Difference between Commit
 
 # Getting started
-Project is divided into to part:
+Project is divided into to parts:
 - [Frontend](https://github.com/Pantelonia/Aggregator)
 - [Backend](https://github.com/Pantelonia/AggregatorBack)
 ### To kick-start clone repo and build the app
@@ -26,7 +27,7 @@ In project i use a bootstrap and for correct work you need it
 Firstly, you should use *pivoting* to connect with DataBase
 ### `$ ssh -L localhost:9999:"pg":5432 s242274@se.ifmo.ru -p 2222`
 After that, run a backend spring-app. If app build correctly user can start Frontend react-app
-You shuold user a this command:
+You should use a this command:
 ### `npm start`
 
 Runs the app in the development mode.<br>
@@ -38,4 +39,5 @@ You will also see any lint errors in the console.
 - [Syrovatskiy pavel](https://github.com/Pantelonia)
 - [Artamonov Alex](https://github.com/ArtamonovAlex)
 - [Kocharian Sergei](https://github.com/KACHANIX)
+
 
