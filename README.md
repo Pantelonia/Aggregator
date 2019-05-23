@@ -7,6 +7,9 @@
 - Information about Author
 - All project's Commit
 - Information about Difference between Commit
+Our project has two implementations of the aggregator:
+On [Java](https://github.com/KACHANIX/Aggregator)
+on [C#](https://github.com/ArtamonovAlex/GitLabCrawler)
 
 # Getting started
 Project is divided into to parts:
