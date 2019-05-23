@@ -88,15 +88,6 @@ class TakeLink extends Component {
         event.preventDefault();
 
         data = JSON.parse(httpGet('http://localhost:8080/takeLink/', this.state.value, this.state.crawler));
-        // data = JSON.parse(httpGet('http://localhost:8080/project/', 6369117));
-        alert(JSON.stringify(data));
-        var fs = require('browserify-fs');
-        fs.writeFile('../jsn.json', JSON.stringify(data), function () {
-            fs.readFile('../jsn.json', 'utf-8', function (err, data) {
-                console.log(data);
-            });
-        });
-
 
         this.setState({redirect: true});
 
@@ -111,7 +102,6 @@ class TakeLink extends Component {
             <div style={{textAlign: "center"}}>
                 <h1>In progress..</h1>
                 <Link to='/result'> Test Result</Link>
-                {/*<button className='btn-primary' onClick={this.handleClick}>Send Link</button>*/}
 
                 <form className="from" onSubmit={this.handleSubmit}>
 
@@ -158,6 +148,9 @@ class ProjectInfo extends Component {
     }
 
     render() {
+        if (data == null) {
+            return <Redirect push to="/"/>;
+        }
         return (
             <div className="card">
                 <div className="card-header">
@@ -167,7 +160,6 @@ class ProjectInfo extends Component {
                 </div>
                 <code>{img()}</code>
                 <div style={textalign} className="card-body card-text">
-                    {/*<h4 className="">Name: {data.name}</h4>*/}
                     <h2>Description</h2>
                     <h4>{data.description}</h4>
                     <a style={link} href={data.web_url}>{data.web_url}</a>
